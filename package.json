@@ -37,6 +37,7 @@
     "react": "^16.0.0"
   },
   "dependencies": {
+    "inline-style-prefixer": "^5.0.1",
     "lodash": "^4.17.10",
     "prop-types": "^15.6.2"
   },

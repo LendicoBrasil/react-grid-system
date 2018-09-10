@@ -1,3 +1,5 @@
+import { prefixier } from '../../utils';
+
 export default ({
   fluid,
   xs, sm, md, lg, xl,
@@ -36,7 +38,7 @@ export default ({
     styles.maxWidth = `${containerWidths[3]}px`;
   }
 
-  return styles;
+  return prefixier(styles);
 };
 
 export const getAfterStyle = () => ({

@@ -1,7 +1,20 @@
 /* global window */
 /* eslint "no-console": "off" */
 
+import { prefix } from 'inline-style-prefixer';
+
 import { getConfiguration } from './config';
+
+export const prefixier = (styl) => {
+  const modified = prefix(styl);
+  modified.display = (modified.display || []).reduce((acc, cur) => {
+    if (acc) {
+      return `${acc}; display: ${cur}`;
+    }
+    return cur;
+  }, 0);
+  return modified;
+};
 
 const getViewPort = () => {
   if (typeof window !== 'undefined' && window.innerWidth) {

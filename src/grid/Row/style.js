@@ -1,3 +1,5 @@
+import { prefixier } from '../../utils';
+
 export default ({
   gutterWidth, align, justify, debug, moreStyle,
 }) => {
@@ -32,5 +34,5 @@ export default ({
     styles.background = 'rgba(128,128,128,.05)';
   }
 
-  return styles;
+  return prefixier(styles);
 };

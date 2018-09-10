@@ -1,4 +1,5 @@
-import { screenClasses } from '../../utils';
+import { screenClasses, prefixier } from '../../utils';
+
 
 const hasWidth = widths => Object.keys(widths).reduce((acc, cur) => acc || widths[cur], false);
 
@@ -57,5 +58,5 @@ export default ({
     styles.flexGrow = 1;
   }
 
-  return styles;
+  return prefixier(styles);
 };
